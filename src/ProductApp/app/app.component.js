@@ -9,6 +9,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
+        this.pageTitle = 'Product Application';
         this.name = 'Angular';
     }
     return AppComponent;
@@ -16,7 +17,8 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "<h1>Hello {{name}}</h1>",
+        // template: `<h1>Hello {{name}}</h1>`, // removed to hand off HTML to an .html file
+        templateUrl: './app.component.html' // this is the .html file i've replaced the template with
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
